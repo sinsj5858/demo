@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MemberServiceTest {
     MemberService memberService;
     MemoryMemberRepository memoryMemberRepository;
-
+    // 모르겠다.
     @BeforeEach
     void beforEach(){
         memoryMemberRepository = new MemoryMemberRepository();

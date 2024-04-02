@@ -23,6 +23,13 @@ public class MemberService {
         return member.getId();
     }
 
+    public Member login(String loginId, String password){
+            return memberRepository.findByLoginId(loginId)
+                    .filter(m -> m.getPassword().equals(password))
+                    .orElse(null);
+    }//return null이면 실패
+
+
     private void validatefDuplicateMember(Member member) {  ///중복회원검증
         memberRepository.findByName(member.getName())
                 .ifPresent(m -> {

@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
 import com.example.demo.domain.Member;
+import jakarta.annotation.PostConstruct;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
@@ -10,4 +11,12 @@ public interface SpringDataJpaMemberRepository extends JpaRepository<Member,Long
 
     @Override
     Optional<Member> findByName(String name);   //기본CRUD가 아닌 생성된 테이블임
+
+    @Override
+    Optional<Member> findByLoginId(String loginId);
+
+    @Override
+    Optional<Member> findByPassword(String password);
+
+
 }

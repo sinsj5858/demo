@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import com.example.demo.domain.Member;
 import com.example.demo.repository.MemberRepository;
-import com.example.demo.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -49,7 +48,6 @@ class MemberServiceIntegrationTest {
         Assertions.assertThat(returnMesage.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
         //then
     }
-
 
     @Test
     void findMembers() {
